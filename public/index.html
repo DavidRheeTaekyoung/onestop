@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>주식회사 총무부 · 100만원, 7일, 회사 한 채</title>
+<meta name="description" content="법인 등기부터 사무실·인터넷·홈페이지·이메일·AI 환경·ERP까지. 1인 창업에 필요한 모든 것을 총무부가 7일 안에 세팅해 드립니다. 창업자 부담 100만원.">
+<meta property="og:title" content="주식회사 총무부 — 100만원, 7일, 회사 한 채">
+<meta property="og:description" content="1인 창업에 필요한 모든 것을 7일 안에. 창업자 부담 100만원.">
+<meta property="og:url" content="https://onestop.artus.kr/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1c2830">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* 관공서 서식지: 잉크 남색 + 인주 빨강. 히어로 오른쪽에 '회사 인도 명세서' 한 장 */
+:root{
+  --paper:#eef1f0; --sheet:#ffffff; --ink:#1c2830; --mut:#5a676e; --line:#d3dad9; --soft:#e3e8e7;
+  --seal:#c42f27; --seal-soft:#f7e3e1; --ok:#2e7a4d;
+  --f-body:"IBM Plex Sans KR","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#111618; --sheet:#182024; --ink:#e3e9eb; --mut:#95a3aa; --line:#2b363b; --soft:#212b30;
+  --seal:#e8574c; --seal-soft:#3a1f1d; --ok:#6cc391; color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--f-body);padding-inline:20px;-webkit-font-smoothing:antialiased}
+.w{max-width:1120px;margin:0 auto}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.25}
+a{color:inherit}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.06em;color:var(--seal)}
+
+/* 상단 */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;border-bottom:2px solid var(--ink)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:17px}
+.brand .seal{width:30px;height:30px;border:2px solid var(--seal);border-radius:50%;color:var(--seal);display:grid;place-items:center;font-size:14px;font-weight:700;transform:rotate(-8deg)}
+.top nav{display:flex;gap:18px;font-size:14.5px}
+.top nav a{text-decoration:none;color:var(--mut)}
+.top nav a:hover{color:var(--ink)}
+@media(max-width:640px){.top nav a:not(.cta-s){display:none}}
+.cta-s{color:var(--ink)!important;font-weight:500;border:1px solid var(--ink);padding:4px 12px;border-radius:3px}
+
+/* 히어로 */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding-block:64px 72px}
+@media(max-width:880px){.hero{grid-template-columns:1fr;gap:36px;padding-block:44px 52px}}
+.hero h1{font-size:clamp(40px,6.4vw,72px);font-weight:700;letter-spacing:-.035em;line-height:1.08;margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--seal)}
+.hero p.lead{font-size:18px;color:var(--mut);max-width:34em;margin:22px 0 0}
+.hero .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;font-weight:500;text-decoration:none;padding:11px 20px;border-radius:3px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+
+/* 인도 명세서 */
+.slip{background:var(--sheet);border:1px solid var(--line);box-shadow:0 18px 40px -24px rgba(20,30,36,.35);padding:22px 22px 18px;position:relative;transform:rotate(.6deg)}
+.slip .hd{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid var(--ink);padding-bottom:8px;margin-bottom:6px}
+.slip .hd b{font-size:16px}
+.slip .hd span{font-family:var(--f-mono);font-size:11.5px;color:var(--mut)}
+.slip ol{list-style:none;margin:0;padding:0}
+.slip li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:8px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px;align-items:baseline}
+.slip li .d{font-family:var(--f-mono);font-size:12px;color:var(--seal)}
+.slip li .ck{font-family:var(--f-mono);font-size:12px;color:var(--ok)}
+.slip .sum{display:flex;justify-content:space-between;align-items:baseline;padding-top:12px;font-size:14px}
+.slip .sum b{font-family:var(--f-mono);font-size:22px;font-weight:500}
+.slip .stamp{position:absolute;right:18px;bottom:52px;width:84px;height:84px;border:3px solid var(--seal);border-radius:50%;color:var(--seal);display:grid;place-items:center;text-align:center;font-weight:700;font-size:16px;line-height:1.15;transform:rotate(-14deg);opacity:.85;background:transparent}
+.slip .stamp small{display:block;font-family:var(--f-mono);font-size:10px;font-weight:400}
+@media (prefers-reduced-motion:no-preference){.slip .stamp{animation:stamp .5s .6s both cubic-bezier(.2,1.6,.4,1)}@keyframes stamp{from{transform:rotate(-14deg) scale(1.6);opacity:0}to{transform:rotate(-14deg) scale(1);opacity:.85}}}
+
+/* 섹션 */
+section.s{padding-block:64px;border-top:1px solid var(--line)}
+.s-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:32px;margin-bottom:36px;align-items:end}
+@media(max-width:820px){.s-head{grid-template-columns:1fr;gap:12px}}
+.s-head h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;margin-top:8px}
+.s-head p{margin:0;color:var(--mut);max-width:40em}
+
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);background:var(--sheet)}
+@media(max-width:700px){.compare{grid-template-columns:1fr}}
+.compare>div{padding:24px 26px;display:grid;gap:12px;align-content:start}
+.compare>div+div{border-left:1px solid var(--line)}
+@media(max-width:700px){.compare>div+div{border-left:0;border-top:1px solid var(--line)}}
+.compare h3{font-size:17px}
+.compare .big{font-family:var(--f-mono);font-size:30px;font-weight:500}
+.compare ul{margin:0;padding-left:18px;color:var(--mut);font-size:14.5px;display:grid;gap:3px}
+.compare .us{background:var(--seal-soft)}
+.compare .us .big{color:var(--seal)}
+
+.drawers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media(max-width:900px){.drawers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.drawers{grid-template-columns:1fr}}
+.drawer{padding:22px 22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--sheet);min-width:0}
+.drawer .k{font-family:var(--f-mono);font-size:12px;color:var(--seal)}
+.drawer h3{font-size:18px;margin:4px 0 10px}
+.drawer ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--mut);display:grid;gap:3px}
+
+.days{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));border:1px solid var(--line);background:var(--sheet)}
+@media(max-width:980px){.days{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:520px){.days{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.day{padding:16px 14px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;gap:6px;align-content:start;min-width:0}
+.day .d{font-family:var(--f-mono);font-size:14px;color:var(--seal)}
+.day b{font-size:15px}
+.day p{margin:0;font-size:13px;color:var(--mut)}
+.day.last{background:var(--seal-soft)}
+.fine{font-size:13px;color:var(--mut);margin-top:14px;max-width:60em}
+
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+@media(max-width:700px){.principles{grid-template-columns:1fr}}
+.principles div{padding:22px 0 24px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px;padding-right:24px}
+.principles .n{font-family:var(--f-mono);color:var(--seal);font-size:14px;padding-top:2px}
+.principles b{display:block;font-size:17px;margin-bottom:4px}
+.principles p{margin:0;color:var(--mut);font-size:14.5px}
+
+.local{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+@media(max-width:820px){.local{grid-template-columns:1fr}}
+.local h2{font-size:clamp(28px,4vw,44px);letter-spacing:-.025em}
+.local p{color:var(--mut);margin:16px 0 0;max-width:34em}
+.local .places{display:flex;flex-wrap:wrap;gap:8px}
+.local .places span{border:1px solid var(--ink);padding:8px 16px;font-weight:500;border-radius:999px;font-size:15px}
+.local .places span.on{background:var(--ink);color:var(--paper)}
+
+.apply{background:var(--ink);color:var(--paper);padding:48px 40px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:center;margin-block:64px 0}
+@media(max-width:820px){.apply{grid-template-columns:1fr;padding:36px 24px}}
+.apply h2{font-size:clamp(26px,3.6vw,38px);letter-spacing:-.02em}
+.apply p{opacity:.78;margin:12px 0 0}
+.apply .mail{display:grid;gap:10px}
+.apply .addr{font-family:var(--f-mono);font-size:clamp(17px,2.2vw,22px);border:1px solid color-mix(in srgb,var(--paper) 35%,transparent);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;word-break:break-all}
+.apply .addr button{font:inherit;font-family:var(--f-body);font-size:13px;background:var(--paper);color:var(--ink);border:0;padding:6px 12px;border-radius:3px;cursor:pointer;white-space:nowrap}
+.apply small{opacity:.7;font-size:13px}
+
+footer{padding-block:36px 48px;font-size:13px;color:var(--mut);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="w">
+  <header class="top">
+    <a class="brand" href="/"><span class="seal" aria-hidden="true">총</span>주식회사 총무부</a>
+    <nav aria-label="주요 메뉴">
+      <a href="#box">상자 안</a>
+      <a href="#days">7일 공정</a>
+      <a href="#principles">원칙</a>
+      <a class="cta-s" href="#apply">상담 신청</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">1인 창업 원스톱 · ONESTOP</span>
+        <h1>100만원, <em>7일</em>,<br>회사 한 채.</h1>
+        <p class="lead">법인 등기와 이사회 구성부터 사무실, 인터넷과 TV, 홈페이지와 이메일, AI 환경과 ERP까지. 1인 창업에 필요한 모든 것을 총무부가 한 번에 세팅해 일주일 안에 넘겨 드립니다.</p>
+        <div class="btns">
+          <a class="btn" href="#apply">창업 상담 신청</a>
+          <a class="btn ghost" href="#box">무엇이 들어 있나</a>
+        </div>
+      </div>
+      <div class="slip" aria-label="회사 인도 명세서 예시">
+        <div class="hd"><b>회사 인도 명세서</b><span>서식 총무-007</span></div>
+        <ol>
+          <li><span class="d">D1</span><span>정관 · 상호 · 임원 구성</span><span class="ck">완료</span></li>
+          <li><span class="d">D3</span><span>설립등기 · 사업자등록</span><span class="ck">완료</span></li>
+          <li><span class="d">D4</span><span>법인 통장 · 사무실 · 인터넷 · TV</span><span class="ck">완료</span></li>
+          <li><span class="d">D5</span><span>도메인 · 홈페이지 · 업무 메일</span><span class="ck">완료</span></li>
+          <li><span class="d">D6</span><span>AI 환경 · ERP · 세무 기장 연결</span><span class="ck">완료</span></li>
+          <li><span class="d">D7</span><span>열쇠 · 계정 대장 · 첫 이사회 의사록</span><span class="ck">인도</span></li>
+        </ol>
+        <div class="sum"><span>창업자 부담</span><b>₩1,000,000</b></div>
+        <div class="stamp" aria-hidden="true">인도<small>D+7</small></div>
+      </div>
+    </section>
+
+    <section class="s" id="why">
+      <div class="s-head">
+        <div><span class="eyebrow">왜 총무부인가</span><h2>창업은 쉬워졌는데,<br>회사 차리기는 여전히 일입니다.</h2></div>
+        <p>등기소, 은행, 세무서, 통신사, 부동산, 도메인 업체, 소프트웨어 회사. 혼자 하면 몇 주가 걸리고 비용도 쌓입니다. 총무부는 이 일을 한 창구에서 병렬로 처리하고, 지자체 창업 지원 프로그램을 연결해 창업자 부담을 100만원으로 맞춥니다.</p>
+      </div>
+      <div class="compare">
+        <div>
+          <h3>혼자 차릴 때</h3>
+          <span class="big">3~6주</span>
+          <ul><li>기관과 업체를 하나씩 찾아다니는 일정</li><li>서류 반려와 재방문</li><li>사무실·통신·IT 계약이 따로따로</li><li>지원사업은 알아도 신청할 시간이 없음</li></ul>
+        </div>
+        <div class="us">
+          <h3>총무부와 차릴 때</h3>
+          <span class="big">7일</span>
+          <ul><li>한 번의 상담과 한 장의 위임장</li><li>등기·공간·통신·디지털을 동시에 진행</li><li>모든 계정과 계약은 창업자 명의로</li><li>창업 지원 프로그램 매칭과 신청까지</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="s" id="box">
+      <div class="s-head">
+        <div><span class="eyebrow">100만원 상자 안</span><h2>여섯 개의 서랍</h2></div>
+        <p>회사가 첫날부터 일할 수 있는 상태로 넘겨 드립니다. 서랍 하나하나가 따로 알아보면 며칠씩 걸리는 일입니다.</p>
+      </div>
+      <div class="drawers">
+        <div class="drawer"><span class="k">A</span><h3>법인 설립</h3><ul><li>상호 검토와 정관 작성</li><li>설립등기</li><li>법인인감과 등기사항증명서</li><li>사업자등록</li><li>이사·감사 선임과 첫 이사회 의사록</li><li>주주명부와 주식 서류</li></ul></div>
+        <div class="drawer"><span class="k">B</span><h3>공간</h3><ul><li>사무실 (창업보육센터·공유오피스)</li><li>책상·의자·수납</li><li>인터넷과 와이파이</li><li>TV와 회의용 디스플레이</li><li>복합기와 출입 키</li></ul></div>
+        <div class="drawer"><span class="k">C</span><h3>디지털 기본기</h3><ul><li>도메인</li><li>홈페이지</li><li>업무 이메일</li><li>그룹웨어·캘린더·드라이브</li><li>로고와 명함</li></ul></div>
+        <div class="drawer"><span class="k">D</span><h3>AI 환경</h3><ul><li>업무용 AI 계정</li><li>회사에 맞춘 AI 에이전트 세팅</li><li>바로 쓰는 사용 교육</li></ul></div>
+        <div class="drawer"><span class="k">E</span><h3>경영관리</h3><ul><li>ERP (회계·매입매출)</li><li>전자세금계산서</li><li>법인 통장·카드 연동</li><li>기장 세무사 연결</li><li>4대보험 사업장 성립신고</li></ul></div>
+        <div class="drawer"><span class="k">F</span><h3>지원사업</h3><ul><li>지자체·정부 창업 지원 매칭</li><li>신청서 작성 지원</li><li>선정 후 정산 지원</li></ul></div>
+      </div>
+    </section>
+
+    <section class="s" id="days">
+      <div class="s-head">
+        <div><span class="eyebrow">7일 공정</span><h2>입금일이 D0입니다</h2></div>
+        <p>여러 기관의 일을 순서대로가 아니라 동시에 진행하기 때문에 일주일이면 충분합니다.</p>
+      </div>
+      <div class="days">
+        <div class="day"><span class="d">D0</span><b>신청</b><p>입금, 신청서와 위임장 서명, 지원사업 자격 확인</p></div>
+        <div class="day"><span class="d">D1</span><b>설계</b><p>상호·사업목적·자본금·임원 확정, 정관 작성, 도메인 확보</p></div>
+        <div class="day"><span class="d">D2</span><b>등기 신청</b><p>전자 설립등기 신청, 사무실 배정과 계약</p></div>
+        <div class="day"><span class="d">D3</span><b>등기 완료</b><p>법인인감과 등기사항증명서, 사업자등록 신청</p></div>
+        <div class="day"><span class="d">D4</span><b>금융·공간</b><p>법인 통장과 카드, 인터넷·TV 개통, 가구와 복합기 반입</p></div>
+        <div class="day"><span class="d">D5</span><b>디지털</b><p>홈페이지, 업무 메일, 그룹웨어, 명함</p></div>
+        <div class="day"><span class="d">D6</span><b>운영 시스템</b><p>AI 환경, ERP와 세금계산서, 기장 연결, 4대보험</p></div>
+        <div class="day last"><span class="d">D7</span><b>인도</b><p>열쇠와 계정 대장, 첫 이사회 의사록, 지원사업 신청 착수</p></div>
+      </div>
+      <p class="fine">등기와 사업자등록 소요일은 관할 기관과 서류 상태에 따라 달라질 수 있습니다. 창업 지원 프로그램의 자격과 지원 범위는 지역과 시기에 따라 다르며, 상담 때 확인해 드립니다.</p>
+    </section>
+
+    <section class="s" id="principles">
+      <div class="s-head">
+        <div><span class="eyebrow">총무부의 원칙</span><h2>약속하는 네 가지</h2></div>
+        <p>총무부는 창업자의 회사를 대신 소유하거나 붙잡아 두지 않습니다.</p>
+      </div>
+      <div class="principles">
+        <div><span class="n">01</span><span><b>부담은 100만원으로 끝납니다</b><p>나머지는 지자체·정부 창업 지원 재원으로 맞춥니다. 추가 청구가 생기는 구조를 만들지 않습니다.</p></span></div>
+        <div><span class="n">02</span><span><b>7일 안에 넘겨 드립니다</b><p>입금일부터 일주일 안에 열쇠와 계정 대장을 드립니다.</p></span></div>
+        <div><span class="n">03</span><span><b>회사는 창업자의 것입니다</b><p>계정, 도메인, 인감, 계약은 모두 창업자 명의로 만듭니다. 총무부는 위임받아 세팅만 합니다.</p></span></div>
+        <div><span class="n">04</span><span><b>지방에서 시작합니다</b><p>청년 창업으로 지방 도시를 다시 채우는 것이 총무부가 일하는 이유입니다.</p></span></div>
+      </div>
+    </section>
+
+    <section class="s">
+      <div class="local">
+        <div>
+          <span class="eyebrow">첫 무대</span>
+          <h2>경남과 부산의<br>청년 창업자부터.</h2>
+          <p>총무부의 첫 회사들은 경남과 부산에서 만들어집니다. 지역 청년 창업 프로그램과 함께 파일럿을 준비하고 있습니다.</p>
+        </div>
+        <div class="places" aria-label="첫 지역"><span class="on">창원</span><span>경남</span><span>부산</span></div>
+      </div>
+    </section>
+
+    <section class="apply" id="apply">
+      <div>
+        <h2>회사 한 채, 상담부터 시작하세요.</h2>
+        <p>만들고 싶은 회사를 한두 줄로 적어 메일을 보내 주세요. 지원 자격과 일정을 확인해 회신 드립니다.</p>
+      </div>
+      <div class="mail">
+        <div class="addr"><span id="addr">hello@onestop.artus.kr</span><button type="button" id="copy">주소 복사</button></div>
+        <small>이름 · 연락처 · 지역 · 만들 회사 한 줄 소개를 함께 적어 주세요.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>주식회사 총무부 (설립 준비 중)</span>
+    <span class="mono">onestop.artus.kr</span>
+  </footer>
+</div>
+<script>
+document.getElementById("copy").addEventListener("click",function(){var b=this,t=document.getElementById("addr").textContent;
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent="복사됨";setTimeout(function(){b.textContent="주소 복사"},1600)},function(){var r=document.createRange();r.selectNodeContents(document.getElementById("addr"));var s=getSelection();s.removeAllRanges();s.addRange(r)})});
+</script>
+</body>
+</html>
