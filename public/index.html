@@ -71,6 +71,8 @@ a{color:inherit}
 .slip .stamp small{display:block;font-family:var(--f-mono);font-size:10px;font-weight:400}
 @media (prefers-reduced-motion:no-preference){.slip .stamp{animation:stamp .5s .6s both cubic-bezier(.2,1.6,.4,1)}@keyframes stamp{from{transform:rotate(-14deg) scale(1.6);opacity:0}to{transform:rotate(-14deg) scale(1);opacity:.85}}}
 
+@media(max-width:880px){.slip .stamp{right:-6px;top:-34px;width:72px;height:72px;font-size:14px}}
+html,body{overflow-x:clip}
 /* 섹션 */
 section.s{padding-block:64px;border-top:1px solid var(--line)}
 .s-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:32px;margin-bottom:36px;align-items:end}

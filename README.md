@@ -21,7 +21,7 @@ npx wrangler pages deploy public --project-name onestop --branch main --commit-d
 배포 전 `npx wrangler whoami` 로 prodigen 계정인지 확인.
 
 ## 도메인
-- https://onestop.artus.kr (artus.kr 존: prodigen 계정, CNAME onestop → onestop.pages.dev)
+- https://onestop.artus.kr (artus.kr 존: prodigen 계정, CNAME onestop → onestop-dm5.pages.dev)
 - 업무 메일 hello@onestop.artus.kr
 
 ## 운영
