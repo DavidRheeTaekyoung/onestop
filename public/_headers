@@ -5,3 +5,6 @@
 
 /buildin/*
   X-Robots-Tag: noindex, nofollow
+
+/lg/*
+  X-Robots-Tag: noindex, nofollow
